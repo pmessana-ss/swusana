@@ -14,5 +14,5 @@ Currently only tested in Chrome.
 ## Installation
 
 - Install tampermonkey: https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en
-- Click on the below raw script URL that should auto install the script into Tamper Monkey: https://github.com/sendwithus/swusana/raw/master/swusana.user.js
+- Click on the below raw script URL that should auto install the script into Tamper Monkey: https://github.com/codeallthethingz/swusana/raw/master/swusana.user.js
 - Reload your Asana page and you should see new buttons appear in the top nav bar.
