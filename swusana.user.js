@@ -33,8 +33,8 @@ $(document).ready(function(){
         $(buttonBarLocation).after(imageButton);
         $(buttonBarLocation).after(blackoutButton);
         $(buttonBarLocation).after(noiseButton);
-        blackoutProfileStyle = $('.TopbarPageHeaderGlobalActions .Avatar').attr('style');
-
+        blackoutProfileStyle = $('.TopbarPageHeaderGlobalActions .AvatarPhoto').attr('style');
+        
         $('.TopbarContingentUpgradeLink').hide();
 
         // TIMER TRIGGERS
@@ -167,8 +167,9 @@ observer.observe(target, {
 setInterval(function() {
     // blackout loop
     if (blackoutButtonOn) {
-        $('.RemovableAvatar-avatarRemoveButton').each(function(index,item){
-            var followStyle = $(item).siblings('.Avatar').attr('style');
+        $('.RemovableAvatar .AvatarPhoto').each(function(index,item){
+            var followStyle = $(item).attr('style');
+            console.log(blackoutProfileStyle.startsWith(followStyle.substring(0, followStyle.length - 13)))
             if(blackoutProfileStyle.startsWith(followStyle.substring(0, followStyle.length - 13))) {
                 $('.ToggleFollowButton-toggleText').trigger('click');
             }
