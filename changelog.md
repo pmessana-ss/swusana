@@ -1,5 +1,9 @@
 # Changelog
 
+0.14.1
+-- 
+- BUGFIX: id changed and observer lost target.
+
 0.14.0
 --
 - BUGFIX: bug/feature templates selector updated to reflect change in Asana source
