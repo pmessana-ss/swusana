@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Swusana
 // @namespace    http://tampermonkey.net/
-// @version      0.14.0
+// @version      0.14.1
 // @description  Asana Productivity Enhancements including - Noise Reduction.  Blackout periods.  Timer
 // @author       will@sendwithus.com
 // @match        https://app.asana.com/*
@@ -34,7 +34,7 @@ $(document).ready(function(){
         $(buttonBarLocation).after(blackoutButton);
         $(buttonBarLocation).after(noiseButton);
         blackoutProfileStyle = $('.TopbarPageHeaderGlobalActions .AvatarPhoto').attr('style');
-        
+
         $('.TopbarContingentUpgradeLink').hide();
 
         // TIMER TRIGGERS
@@ -122,7 +122,7 @@ $(document).ready(function(){
 });
 
 // EVENT LOOPS
-var target = document.querySelector('#asana_ui');
+var target = document.querySelector('#asana_main');
 MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
 
 var observer = new MutationObserver(function(mutations, observer) {
