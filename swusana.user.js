@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Swusana
 // @namespace    http://tampermonkey.net/
-// @version      0.14.1
+// @version      0.14.2
 // @description  Asana Productivity Enhancements including - Noise Reduction.  Blackout periods.  Timer
 // @author       will@sendwithus.com
 // @match        https://app.asana.com/*
@@ -61,7 +61,7 @@ $(document).ready(function(){
             var currentBackgroundImage = Cookies.get('currentBackgroundImage');
             if (imageButtonOn) {
                 var newImage = prompt('Enter an image URL', currentBackgroundImage);
-                $('.ProjectPageView').css('opacity', '0.8');
+                $('.AsanaView-asanaPage').css('opacity', '0.85');
                 $('#asana_main').css('background-image', 'url(' + newImage + ')').css('background-repeat','no-repeat').css('background-size','110%').addClass('themeBackground-aqua');
                 Cookies.set('currentBackgroundImage', newImage, { expires: 365 });
             } else {
@@ -72,7 +72,7 @@ $(document).ready(function(){
         if (Cookies.get('imageButtonStatus') === 'true'){
             $('#imageButton').toggleClass('swusana-button-on');
             var newImage = Cookies.get('currentBackgroundImage');
-            $('.ProjectPageView').css('opacity', '0.8');
+            $('.AsanaView-asanaPage').css('opacity', '0.85');
             $('#asana_main').css('background-image', 'url(' + newImage + ')').css('background-repeat','no-repeat').css('background-size','110%').addClass('themeBackground-aqua');;
             imageButtonOn = true;
         }

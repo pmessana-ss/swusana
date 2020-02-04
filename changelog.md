@@ -1,5 +1,9 @@
 # Changelog
 
+0.14.2
+-- 
+- Make transparency work for background image.
+
 0.14.1
 -- 
 - BUGFIX: id changed and observer lost target.
