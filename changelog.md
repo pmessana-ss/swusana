@@ -1,5 +1,9 @@
 # Changelog
 
+0.14.3
+--
+Asana added `-button` to a class which broke the button attachment process. fixed.
+
 0.14.2
 -- 
 - Make transparency work for background image.
