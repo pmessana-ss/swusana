@@ -24,6 +24,16 @@ var timerButtonOn = false;
 var blackoutProfileStyle = '';
 var timer = 0;
 
+var waitForEl = function(selector, callback) {
+  if (jQuery(selector).length) {
+    callback();
+  } else {
+    setTimeout(function() {
+      waitForEl(selector, callback);
+    }, 100);
+  }
+};
+
 // ONLOAD
 var buttonBarLocation = '.TopbarHelpMenuButton-button';
 $(document).ready(function(){
@@ -60,7 +70,7 @@ $(document).ready(function(){
             var currentBackgroundImage = Cookies.get('currentBackgroundImage');
             if (imageButtonOn) {
                 var newImage = prompt('Enter an image URL', currentBackgroundImage);
-                $('.AsanaView-asanaPage').css('opacity', '0.85');
+                $('.ProjectPage').css('opacity', '0.85');
                 $('#asana_main').css('background-image', 'url(' + newImage + ')').css('background-repeat','no-repeat').css('background-size','110%').addClass('themeBackground-aqua');
                 Cookies.set('currentBackgroundImage', newImage, { expires: 365 });
             } else {
@@ -71,7 +81,7 @@ $(document).ready(function(){
         if (Cookies.get('imageButtonStatus') === 'true'){
             $('#imageButton').toggleClass('swusana-button-on');
             var newImage = Cookies.get('currentBackgroundImage');
-            $('.AsanaView-asanaPage').css('opacity', '0.85');
+            $('.ProjectPage').css('opacity', '0.85');
             $('#asana_main').css('background-image', 'url(' + newImage + ')').css('background-repeat','no-repeat').css('background-size','110%').addClass('themeBackground-aqua');;
             imageButtonOn = true;
         }
@@ -207,17 +217,6 @@ function addGlobalStyle(css) {
     style.innerHTML = css;
     head.appendChild(style);
 }
-
-var waitForEl = function(selector, callback) {
-  if (jQuery(selector).length) {
-    callback();
-  } else {
-    setTimeout(function() {
-      waitForEl(selector, callback);
-    }, 100);
-  }
-};
-
 
 // STYLE
 var css =
