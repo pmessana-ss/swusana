@@ -44,7 +44,7 @@ $(document).ready(function(){
         $(buttonBarLocation).after(noiseButton);
         blackoutProfileStyle = $('.TopbarPageHeaderGlobalActions .AvatarPhoto').attr('style');
 
-        $('.TopbarContingentUpgradeLink').hide();
+        $('.TopbarContingentUpgradeButton-link').hide();
 
         // TIMER TRIGGERS
         $('#timerButton').on('click', function(){
