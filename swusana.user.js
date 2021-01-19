@@ -285,6 +285,7 @@ var css =
     '.swusana-button:hover { '+
         'opacity: 1;' +
     '}' +
+    '.BusinessUpgradeButton.AbstractThemeableRectangularButton { display: none; }' +
     '.StoryFeed-miniStory+.StoryFeed-blockStory { margin-top: 0 !important; }' +
     '.swusana-button-on { '+
         'border-bottom: 3px solid #AAAAAA;' +
