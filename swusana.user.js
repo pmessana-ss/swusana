@@ -226,6 +226,7 @@ var css =
         'margin-bottom: -4px;' +
         'opacity: 0.7' +
     '}' +
+    '.BusinessUpgradeButton.AbstractThemeableRectangularButton { display: none; }' +
     '.swusana-button:hover { '+
         'opacity: 1;' +
     '}' +
